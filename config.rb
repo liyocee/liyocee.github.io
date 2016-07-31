@@ -62,3 +62,10 @@ configure :build do
   activate :asset_hash, ignore: [/^img\/.*/, /^fonts\/.*/, /^[^\/]*$/]
   # Last one is for root-directory favicons, etc.
 end
+
+# deploy
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true
+  deploy.branch = 'master'
+end
