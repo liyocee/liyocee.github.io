@@ -1,0 +1,63 @@
+- 2009:
+  - heading: Opened Xcode
+    content:
+    - I worked from the basement of Ashley's mother's house (there was no WiFi so I had to connect directly to their modem with ethernet). Armed with cs193p courses from Stanford (instructed that year by Evan Doll), I learnt the basics of iOS app structure.
+    - I also had a few reference books and some help from a friend. <a href='http://twitter.com/jasonbrennan'>Jason Brennan</a> and I talked a lot over Google Wave. He helped me with everything from syntax of Objective-C to quirks of Xcode.
+    img_url: /img/blog/5-years-of-ios/xcode.png
+
+  - heading: Coffee Timer
+    content:
+    - "This was to be my first app. I wanted to create something that I would want to use. I really liked using a coffee press but would often forget it was brewing and spoil the coffee. A timer to make coffee would be perfect: simple enough to execute but meaningful enough to motivate me."
+    - "The app was pretty simple: some models were deserialized from NSUserDefaults, presented in a table view, blah blah blah. It wasn't much, but it was mine and I was proud of it. Seeing my software run on my iPod touch for the first time was as close to a religious experience as I've ever had."
+    img_url: /img/blog/5-years-of-ios/coffeetimer.png
+
+
+- 2010:
+  - heading: WWDC Scholarship
+    content:
+    - Someone, I think on Twitter, recommended that students apply for a WWDC scholarship. I had no idea what it was, but I figured I'd throw my hat in. I wrote about CoffeeTimer and some background about me, and then I forgot about it.
+    - Weeks or months later, I got an email from Apple saying that I had won. I Googled "WWDC", realized that this was kind of a big deal, and asked Ashley what I should do. She encouraged me to accept the offer and my parents helped me pay for my plane ticket to San Francisco. I quickly applied for a passport – this would be my first ever flight.
+
+  - heading: WWDC 2010
+    content:
+    - WWDC was an amazing experience. From the city of San Francisco to the energy in the air – it was incredible. The trip really opened up my eyes to what else is out there in the world – it was the spark that drove me to keep travelling.
+    - The conference itself was amazing. The line for the keynote had as many people as are in my hometown. I made some friends in line – particularly <a href='http://twitter.com/philippec'>Philippe Casgrain</a> and <a href='http://twitter.com/iKenndac'>Daniel Kennett</a>.
+    - iOS 4 and the iPhone 4 were announced. Xcode 4 was announced. GCD was ported to iOS (this was important to me, as I had recently learnt Haskell and used LINQ in .Net). I dove in.
+    - "One presentation really stood out to me: Chris Parker giving his annual &quot;What's new in UIKit talk. I had never seen a professional developer care so much about design. In the labs, I was lucky enough to talk to him in-person."
+    - Later that week, I visited the Design lab and got feedback on CoffeeTimer. It was the first time I had met a designer.
+    img_url: /img/blog/5-years-of-ios/wwdc2010.jpg
+
+  - heading: Metric Mate
+    content:
+    - "While at WWDC, I had another idea for an app. It wasn't anything too special: just a metric/imperial unit calculator. But I made it so that it uses fractions instead of decimals, as well as colloquial terms like &quot;a pinch of salt&quot; or &quot;a stick of butter.&quot; I even had a section of things like converting rainbows to smiles. It was the first time that I made delightfulness a priority when making software."
+
+  - heading: First iPhone
+    content:
+    - That Summer, I bought my first ever iPhone. It was a big deal since, as a student, my budget was tight. However, the iPhone 4's retina display – a first of its kind – was compelling enough as a developer to justify it.
+
+  - heading: Redesign CoffeeTimer
+    content:
+    - Later, I redesigned CoffeeTimer with some basic Photoshop skills I had picked up from some online tutorials. In hindsight, it looks atrocious, but I was trying and learning.
+    - I also switched from using NSUserDefault to Core Data for object persistence – my first experience with the framework.
+    img_url: /img/blog/5-years-of-ios/coffeetimer2.png
+
+  - heading: First Contract
+    content:
+    - "That Fall, in preparation for a provincial election, the youth organization of one of the parties hired me to make them an iPhone app. It was my biggest undertaking: postal code lookups, GPS, maps, pulling data from a JSON file I had on the Internet, localization, and more. I was given free reign over the branding and eventually charged my client for 100 hours of work."
+    - "It was the first time that I had worked as a freelancer. The experience was mixed – there were communication problems with the client, and of course it was a hassle to get paid. But I had avoided the biggest mistake freelancers make: I had them sign a contract."
+
+  - heading: Second Contract
+    content:
+    - Emboldened by my success of my first contract, I looked around for more opportunities. My university was interested in using an iPad to collect information from potential students at recruitment fairs.
+    - The technical aspects of the job were not difficult – the information would be transferred off of the devices via email. But the design of the product was problematic. While the recruitment office wanted as much information as possible, the recruiters knew that more fields for recruits to fill out would mean fewer people filled them out at all. It was my first experience balancing priorities between two stakeholders.
+    img_url: /img/blog/5-years-of-ios/unb.png
+
+  - heading: Solar System Simulator
+    content:
+    - "That fall, I took a course on computer graphics. Our term project had a few basic requirements: it had to use OpenGL directly, demonstrate use of dynamic camera angles, and feature moving objects. A partner and I chose a solar system simulator – a common choice. However, we developed our project for the iPad."
+    - The project was really fun – and frustrating. Learning OpenGL was hard enough. Learning the version for embedded devices was even more difficult.
+    - After the project was completed, I continued to develop the project into a universal app with some features we didn't have time for during the project. I put it on the App Store for a few dollars; until recently, it made about $100/month and was often purchased in-bulk by schools.
+    - Looking at the software now, it looks horribly outdated. The code is even worse. But users liked it and it was a tremendous learning experience. Having three apps on the store would be a big help later when I looked for my first job.
+    img_url: /img/blog/5-years-of-ios/simulator.png
+
+
