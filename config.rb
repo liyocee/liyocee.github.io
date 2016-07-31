@@ -1,39 +1,68 @@
-###
-# Page options, layouts, aliases and proxies
-###
+# For custom domains on github pages
+page "CNAME", layout: false
 
-# Per-page layout changes:
-#
-# With no layout
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
+# Assets
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+set :fonts_dir, 'fonts'
 
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
 
-# General configuration
+#Better markdown support
+set :markdown_engine, :redcarpet
+set :markdown,
+    fenced_code_blocks: true,
+    smartypants: true,
+    disable_indented_code_blocks: true,
+    prettify: true,
+    tables: true,
+    with_toc_data: true,
+    no_intra_emphasis: true
 
-###
-# Helpers
-###
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+# Activate the syntax highlighter
+activate :syntax
+
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 version', 'Firefox ESR']
+  config.cascade  = false
+  config.inline   = true
+end
+
+# Make url's prettier, without the .html
+activate :directory_indexes
+
+# Automatic image dimensions on image_tag helper
+activate :automatic_image_sizes
+
+
+# Easier bootstrap navbars
+activate :bootstrap_navbar
+
+# Github pages require relative links
+set :relative_links, true
 
 # Build-specific configuration
 configure :build do
+  # Any files you want to ignore:
+  ignore '/admin/*'
+
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
+
+  # Enable cache buster
+  activate :asset_hash
+
+  # Use relative URLs
+  activate :relative_assets
+end
+
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.build_before = true
 end
