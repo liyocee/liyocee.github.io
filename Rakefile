@@ -8,15 +8,15 @@ task :bootstrap do
   puts `bundle install --without distribution`
 end
 
-
-
 namespace :deploy do
+
+
 
   desc "Deploys RSS and Atom feeds"
   task :feeds do
-    # code here for deploying feeds
     puts "Feeds deployed."
   end
+
   desc "Deploys to production and syncs feeds"
   task :all => [:fetch_gh_pages, :gh_pages, :feeds] do
     puts 'Deploy all succeeded.'
@@ -27,7 +27,7 @@ namespace :deploy do
     Dir.chdir('build') do
       `git init`
       remote_exists = (`git remote | grep origin`).chomp.length > 0
-      `git remote add origin https://github.com/ashfurrow/ashfurrow.github.io.git` unless remote_exists
+      `git remote add origin https://github.com/liyocee/liyocee.github.io.git` unless remote_exists
       `git pull origin master`
     end
   end
@@ -83,6 +83,19 @@ task :server do
   Process.wait(middleman)
 end
 
+desc 'Runs html-proofer against current build/ directory.'
+task :test do
+  require 'html/proofer'
+
+  puts 'Testing build/ directory.'
+  HTML::Proofer.new('build/', {
+    ext: '.html',
+    check_html: true,
+    disable_external: true,
+    alt_ignore: [/.*/],
+    parallel: { in_processes: 3},
+    }).run
+end
 
 desc "Create new blog article"
 task :article, :title do |task, args|
@@ -118,8 +131,6 @@ end
 
 task :default => :server
 
-
-# download image
 def fetch_cloudy_conway
   require 'net/http'
   require 'uri'
@@ -146,3 +157,6 @@ def fetch_cloudy_conway
   [tweet.url, response.body]
 end
 
+def git_branch_name
+  `git rev-parse --abbrev-ref HEAD`
+end

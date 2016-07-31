@@ -1,8 +1,8 @@
-name: Ash Furrow
-subtitle: Software, Design, Photography
-description: Learning and teaching about interesting topics in iOS Development. Sometimes I diverge to talk about design, photography, or what-have-you.
+name: Liyosi Collins
+subtitle: Techpreneur, Machine Learning Enthusiast, Writer, Creative
+description: I am a techpreneur, a machine learning enthusiast, a writer and a creative. I build things by flipping bits n offer pro-bono consulting to early stage startups
 image: /img/siteimage.png
 dark_image: /img/siteimage_dark.png
 default_background_image: /img/backgrounds/default.jpg
-feed_link: //feed.ashfurrow.com/feed.xml
-feed_rss_link: //feed.ashfurrow.com/feed.rss.xml
+feed_link: //feed.liyosi.com/feed.xml
+feed_rss_link: //feed.liyosi.com/feed.rss.xml

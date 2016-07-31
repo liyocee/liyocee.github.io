@@ -1,2 +1,4 @@
-Tech Ranting
-Personal blog about my experiences as a tech enthusiast
+My Blog
+========
+
+My [blog](http://liyosi.com/).

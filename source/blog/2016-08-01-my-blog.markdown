@@ -1,0 +1,8 @@
+---
+title: "My Blog"
+date: 2016-08-01 00:00
+---
+
+Welcome to my personal blog.
+
+<!-- more -->

@@ -1,0 +1,27 @@
+---
+title: Books
+priority: 0.75
+background_image: /img/books/background.jpg
+description: Something here.
+---
+
+/ Page Header
+= partial :header, locals: { title: 'My Reads', background_image: '/img/books/background.jpg' }
+
+.books
+  .container
+    .row
+      - standard_width_div do
+        %ul#books_list.list-inline.text-center
+          %li
+            .title
+              %a.title-link{href:'https://leanpub.com/yourfirstswiftapp/'}
+                %h2 Book Title
+            %a{href:'https://leanpub.com/yourfirstswiftapp/'}
+              %img{src: '/img/books/yourfirstswiftapp.png'}/
+            %div
+              :markdown
+                Tidbits from the book
+          %hr/
+
+

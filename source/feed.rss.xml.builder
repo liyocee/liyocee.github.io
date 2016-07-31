@@ -2,13 +2,13 @@ xml.instruct! :xml, :version => '1.0'
 xml.rss :version => "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
 
   xml.channel do
-    site_url = "https://ashfurrow.com/"
+    site_url = "http://liyosi.com/"
 
-    xml.tag! 'atom:link', :href => "https://ashfurrow.com/feed.rss.xml", :rel => "self", :type => "application/rss+xml"
+    xml.tag! 'atom:link', :href => "http://liyosi.com/feed.rss.xml", :rel => "self", :type => "application/rss+xml"
 
-    xml.title "Ash Furrow"
+    xml.title "Collins Liyosi"
     xml.description data.site.description
-    xml.link "https://ashfurrow.com/"
+    xml.link "http://liyosi.com/"
 
     blog.articles[0..5].each do |post|
       xml.item do

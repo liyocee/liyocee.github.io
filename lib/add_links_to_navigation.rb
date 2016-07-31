@@ -6,7 +6,8 @@ require 'nokogiri'
 
 # Credit goes to the CocoaPods team in figuring out how to do this: https://github.com/CocoaPods/guides.cocoapods.org/blob/4913cffd1b1bf0b85cdfc33614cb5b2d6240ff02/lib/add_links_to_navigation.rb
 
-class AddLinksToNavigation < Middleman::Extension
+module AddLinksToNavigation
+  class << self
 
     def registered(app, options={})
 
@@ -37,6 +38,9 @@ class AddLinksToNavigation < Middleman::Extension
     end
 
     alias :included :registered
+  end
 end
 
-::Middleman::Extensions.register(:add_links_to_navigation, AddLinksToNavigation)
+::Middleman::Extensions.register(:add_links_to_navigation) do
+  ::AddLinksToNavigation
+end

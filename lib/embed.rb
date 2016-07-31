@@ -14,21 +14,23 @@ require 'middleman-core'
 # <div class="embed-responsive embed-responsive-16by9"><iframe src="//www.youtube.com/embed/aLvJ1mqlM98" frameborder="0" allowfullscreen></iframe></div>
 #
 # Sweet.
-class Embed < Middleman::Extension
+module Embed
+  class << self
 
     def registered(app, options={})
       app.after_render do |body, path, locs, template|
 
-        # There are multiple rendering calls and we want to get the one that renders the blog_post template.
+        # There are multiple rendering calls and we want to get the one that renders the blog_post template. 
         if (path.to_s.index "blog_post") != nil
           body.embed_youtube!
         end
-
+        
         body
       end
     end
 
     alias :included :registered
+  end
 end
 
 ::Middleman::Extensions.register(:embed) do

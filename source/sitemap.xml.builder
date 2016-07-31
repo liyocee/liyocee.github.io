@@ -1,10 +1,10 @@
 xml.instruct!
 xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9", 'xmlns:image' => "http://www.google.com/schemas/sitemap-image/1.1" do
-  sitemap.resources.select { |page| 
-    page.path =~ /\.html/ && !page.data.noindex == true 
+  sitemap.resources.select { |page|
+    page.path =~ /\.html/ && !page.data.noindex == true
   }.each do |page|
     xml.url do
-      xml.loc "https://ashfurrow.com#{page.url}"
+      xml.loc "http://liyosi.com#{page.url}"
       xml.lastmod Date.today.to_time.iso8601
       xml.changefreq page.data.changefreq || "monthly"
 
@@ -12,7 +12,7 @@ xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9", 'xmlns:imag
 
       if image_url
         # URLs for images must be absolute
-        image_url.prepend('https://ashfurrow.com') unless image_url.start_with? 'https://'
+        image_url.prepend('http://liyosi.com') unless image_url.start_with? 'https://'
 
         xml.tag! 'image:image' do |image|
           image.tag! 'image:loc', image_url
