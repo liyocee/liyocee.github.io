@@ -1,0 +1,24 @@
+{% if DEFAULT_PAGINATION %}
+    <!-- Pager -->
+    <div class="paginate-wrapper">
+        {% if articles_page.has_next() %}
+            <div class="next-page">
+                <a href="{{ SITEURL }}/{{ articles_next_page.url }}">
+                    <i class="fa fa-arrow-right"></i> Next Page
+                </a>
+            </div>
+        {% endif %}
+    </div>
+    <div class="paginate-wrapper">
+        {% if articles_page.has_previous() %}
+                <div class="previous-page">
+                    <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">
+                        <i class="fa fa-arrow-left"></i> Previous Page
+                    </a>
+                </div>
+         {% endif %}
+    </div>
+    <div class="page-number">Page {{ articles_page.number }} / {{ articles_paginator.num_pages }} </div>
+{% endif %}
+
+
