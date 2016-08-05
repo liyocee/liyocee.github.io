@@ -158,7 +158,9 @@
                         {% if SOCIAL %}
                         {% for name,link in SOCIAL %}
                             <li>
-                                <a href="{{ link }}" target='_blank'>
+                                <a href="{{ link }}" target='_blank' class="link"
+                                 data-original-title="
+                                    {% if name =='envelope' %} Drop <ME> a mail {% else %}Checkout <MY> {{ name }} {% endif %} :-)">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-{{ name|lower }} fa-stack-1x fa-inverse"></i>
@@ -186,6 +188,11 @@
     {% if not DISABLE_CUSTOM_THEME_JAVASCRIPT %}
         <!-- Custom Theme JavaScript -->
         <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/clean-blog.min.js"></script>
+    {% endif %}
+
+     {% if CUSTOM_JS %}
+        <!-- custom js specified by the user -->
+        <script src="{{ SITEURL }}/{{ CUSTOM_JS }}"> </script>
     {% endif %}
 
     {% include 'analytics.html' %}

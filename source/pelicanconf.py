@@ -79,6 +79,7 @@ THEME = 'themes/ckl'
 COLOR_SCHEME_CSS = 'darkly.css'  # can be github.css; tomorrow.css; tomorrow_night.csc; darkly.css; monokai
 # overriding section of the theme styling
 CSS_OVERRIDE = 'static/css/ckl.css'
+CUSTOM_JS = 'static/js/ckl.js'
 SHOW_FULL_ARTICLE = False
 SHOW_SITESUBTITLE_IN_HTML = True
 EXTRA_TEMPLATES_PATHS = [PATH + '/includes']
