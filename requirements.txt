@@ -16,3 +16,4 @@ typogrify==2.0.7
 Unidecode==0.4.19
 webassets==0.11.1
 Fabric==1.12.0
+ghp-import==0.4.1
