@@ -85,5 +85,5 @@ SHOW_SITESUBTITLE_IN_HTML = True
 EXTRA_TEMPLATES_PATHS = [PATH + '/includes']
 # my template settings
 CURRENT_YEAR = 2016
-AUTHOR_IMAGE_PATH = 'static/images/profile.png'
+AUTHOR_IMAGE_PATH = 'static/images/profile_pic.png'
 AUTHOR_URL = '/pages/about/'
