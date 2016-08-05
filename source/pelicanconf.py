@@ -11,7 +11,7 @@ OUTPUT_PATH = 'output/'
 LOAD_CONTENT_CACHE = False
 
 PATH = 'content'
-STATIC_PATHS = ['static', 'blog', 'pages', 'extra/CNAME']
+STATIC_PATHS = ['static', 'blog', 'pages', 'extras/CNAME']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'}
 }
