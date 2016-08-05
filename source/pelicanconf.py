@@ -43,10 +43,10 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 MENUITEMS = [
-    ('Home', '/'),
-    ('Projects', '/pages/projects/'),
-    ('Books', '/pages/books/'),
-    ('About', '/pages/about/'),
+    ('home', '/'),
+    ('projects', '/pages/projects/'),
+    ('books', '/pages/books/'),
+    ('about', '/pages/about/'),
 ]
 
 USE_FOLDER_AS_CATEGORY = True
