@@ -10,7 +10,7 @@ TIMEZONE = 'Africa/Nairobi'
 
 LOAD_CONTENT_CACHE = False
 
-PATH = 'source/content'
+PATH = 'content'
 STATIC_PATHS = ['static', 'blog', 'pages']
 DEFAULT_LANG = u'en'
 RELATIVE_URLS = False
@@ -75,14 +75,14 @@ THEME = 'themes/ckl'
 
 # Theme settings
 # HEADER_COLOR = 'black'
-HEADER_COVER = 'static/images/blog/ckl/banner.jpg'
+# HEADER_COVER = 'static/images/blog/ckl/banner.jpg'
 COLOR_SCHEME_CSS = 'darkly.css'  # can be github.css; tomorrow.css; tomorrow_night.csc; darkly.css; monokai
 # overriding section of the theme styling
-CSS_OVERRIDE = 'css/ckl.css'
+CSS_OVERRIDE = 'static/css/ckl.css'
 SHOW_FULL_ARTICLE = False
 SHOW_SITESUBTITLE_IN_HTML = True
 EXTRA_TEMPLATES_PATHS = [PATH + '/includes']
 # my template settings
 CURRENT_YEAR = 2016
-AUTHOR_IMAGE_PATH = 'images/profile.png'
+AUTHOR_IMAGE_PATH = 'static/images/profile.png'
 AUTHOR_URL = '/pages/about/'
