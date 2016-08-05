@@ -11,7 +11,10 @@ OUTPUT_PATH = 'output/'
 LOAD_CONTENT_CACHE = False
 
 PATH = 'content'
-STATIC_PATHS = ['static', 'blog', 'pages']
+STATIC_PATHS = ['static', 'blog', 'pages', 'extra/CNAME']
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'}
+}
 DEFAULT_LANG = u'en'
 RELATIVE_URLS = False
 
