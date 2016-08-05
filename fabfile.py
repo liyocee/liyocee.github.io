@@ -8,7 +8,7 @@ import SocketServer
 from pelican.server import ComplexHTTPRequestHandler
 
 # Local path configuration (can be absolute or relative to fabfile)
-env.deploy_path = 'output'
+env.deploy_path = './'
 DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
@@ -21,7 +21,7 @@ env.cloudfiles_api_key = 'my_rackspace_api_key'
 env.cloudfiles_container = 'my_cloudfiles_container'
 
 # Github Pages configuration
-env.github_pages_branch = "gh-pages"
+env.github_pages_branch = "gh-master"
 
 # Port for `serve`
 PORT = 8000
