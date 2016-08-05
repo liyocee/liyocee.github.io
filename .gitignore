@@ -20,3 +20,5 @@
 /source/output
 
 *.pyc
+
+source/*.pyc

@@ -7,7 +7,7 @@ SITENAME = u'CKL'
 SITEURL = ''
 DEFAULT_LANG = u'en'
 TIMEZONE = 'Africa/Nairobi'
-
+OUTPUT_PATH = 'output/'
 LOAD_CONTENT_CACHE = False
 
 PATH = 'content'

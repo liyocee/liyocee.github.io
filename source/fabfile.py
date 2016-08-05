@@ -8,7 +8,7 @@ import SocketServer
 from pelican.server import ComplexHTTPRequestHandler
 
 # Local path configuration (can be absolute or relative to fabfile)
-env.deploy_path = './'
+env.deploy_path = '../'
 DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
@@ -89,6 +89,7 @@ def publish():
 
 def gh_pages():
     """Publish to GitHub Pages"""
-    rebuild()
+    clean()
+    local('pelican -s publishconf.py')
     local("ghp-import -b {github_pages_branch} {deploy_path}".format(**env))
     local("git push origin {github_pages_branch}".format(**env))
