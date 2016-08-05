@@ -154,9 +154,8 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12">
                     <ul class="list-inline text-center">
-                    {% if SOCIAL %}
+                        {% if SOCIAL %}
                         {% for name,link in SOCIAL %}
                             <li>
                                 <a href="{{ link }}" target='_blank'>
@@ -165,18 +164,17 @@
                                         <i class="fa fa-{{ name|lower }} fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
-                            </li>
-                        {% endfor %}
-                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        {% endif %}
                     </ul>
-                    {% if FOOTER_INCLUDE %}
-                        {% include FOOTER_INCLUDE %}
-                    {% else %}
-                        {% include 'footer.html' %}
-                    {% endif %}
-                </div>
             </div>
         </div>
+        {% if FOOTER_INCLUDE %}
+            {% include FOOTER_INCLUDE %}
+        {% else %}
+            {% include 'footer.html' %}
+        {% endif %}
     </footer>
 
     <!-- jQuery -->
