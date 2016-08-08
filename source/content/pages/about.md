@@ -22,7 +22,7 @@ I have keen interests in **Machine Learning** and I envision a future where data
 A future that is data driven, where computing will mimic human's intelligence and totally **augment** our lives.
 
 
-In our entangled web, I can be found around the following corners: < you peek at them :-) >
+In our entangled web, I can be found around the following corners: < You're free to peek at them :-) >
 
 [Linkedin](https://www.linkedin.com/in/collins-liyosi-84903943){:target='_blank'} |
 [Github](https://github.com/liyocee){:target='_blank'} |

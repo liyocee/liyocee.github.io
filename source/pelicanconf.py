@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Liyosi Collins'
-SITENAME = u'CKL'
+SITENAME = u'Liyosi'
 SITEURL = ''
 DEFAULT_LANG = u'en'
 TIMEZONE = 'Africa/Nairobi'
@@ -46,7 +46,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 MENUITEMS = [
-    ('home', '/'),
+    ('blog', '/'),
+    ('tags', '/tags'),
+    ('archive', '/archives'),
     ('projects', '/pages/projects/'),
     ('books', '/pages/books/'),
     ('about', '/pages/liyosi/'),
