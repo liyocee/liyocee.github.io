@@ -28,4 +28,4 @@ In our entangled web, I can be found around the following corners: < you peek at
 [Github](https://github.com/liyocee){:target='_blank'} |
 [Stack Overlow](https://stackoverflow.com/users/1823036/liyosi){:target='_blank'} |
 [Twitter](https://twitter.com/collinsliyosi){:target='_blank'} |
-[collinskivale@gmail.com](mailto:info@liyosi.com)
+[info@liyosi.com](mailto:info@liyosi.com)
