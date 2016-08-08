@@ -49,7 +49,7 @@ MENUITEMS = [
     ('home', '/'),
     ('projects', '/pages/projects/'),
     ('books', '/pages/books/'),
-    ('about', '/pages/about/'),
+    ('about', '/pages/liyosi/'),
 ]
 
 USE_FOLDER_AS_CATEGORY = True
@@ -71,8 +71,8 @@ SOCIAL = (
     ('linkedin', 'https://www.linkedin.com/in/collins-liyosi-84903943'),
     ('github', 'https://github.com/liyocee'),
     ('stack-overflow', 'https://stackoverflow.com/users/1823036/liyosi'),
-    ('twitter', 'https://twitter.com/collins.liyosi'),
-    ('envelope', 'mailto:collinskivale@gmail.com')
+    ('twitter', 'https://twitter.com/collinsliyosi'),
+    ('envelope', 'mailto:info@liyosi.com')
 )
 THEME = 'themes/ckl'
 
