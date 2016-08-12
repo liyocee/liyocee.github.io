@@ -2,14 +2,15 @@
 <html lang="en">
 
 <head>
-        <meta charset="utf-8">
+            <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-        <title>Liyosi Collins</title>
+        <title>Static Sites - What I learned putting together this blog, Part 1</title>
 
             <link href="http://liyosi.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Liyosi Full Atom Feed" />
+            <link href="http://liyosi.com/feeds/tech.atom.xml" type="application/atom+xml" rel="alternate" title="Liyosi Categories Atom Feed" />
         <!-- Bootstrap Core CSS -->
         <link href="http://liyosi.com/theme/css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,13 +35,34 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-                <meta property="og:locale" content="">
+
+
+        <meta name="description" content="When it comes to assembling a static site, the technology ecosystem is littered with countless tools, each with its own strengths, ...">
+
+        <meta name="author" content="Liyosi Collins">
+
+        <meta name="tags" content="Static Sites">
+        <meta name="tags" content="CMS">
+        <meta name="tags" content="Blogging Tools">
+
+	                <meta property="og:locale" content="">
 		<meta property="og:site_name" content="Liyosi">
-            <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:site" content="@collinsliyosi">
-            <meta name="twitter:title" content="Liyosi">
-            <meta name="twitter:description" content="View the blog.">
-                <meta name="twitter:image" content="http://liyosi.com/theme/images/post-bg.jpg">
+
+	<meta property="og:type" content="article">
+            <meta property="article:author" content="http://liyosi.com//pages/about/">
+	<meta property="og:url" content="http://liyosi.com/blog/2016/Aug/12/static_sites/">
+	<meta property="og:title" content="Static Sites - What I learned putting together this blog, Part 1">
+	<meta property="article:published_time" content="2016-08-12 09:00:00+03:00">
+            <meta property="og:description" content="When it comes to assembling a static site, the technology ecosystem is littered with countless tools, each with its own strengths, ...">
+
+            <meta property="og:image" content="http://liyosi.com/theme/images/post-bg.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@collinsliyosi">
+        <meta name="twitter:title" content="Static Sites - What I learned putting together this blog, Part 1">
+
+            <meta name="twitter:image" content="http://liyosi.com/theme/images/post-bg.jpg">
+
+            <meta name="twitter:description" content="When it comes to assembling a static site, the technology ecosystem is littered with countless tools, each with its own strengths, ...">
 </head>
 
 <body>
@@ -77,12 +99,17 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('http://liyosi.com/theme/images/home-bg.jpg')">
+        <header class="intro-header" style="background-image: url('http://liyosi.com/theme/images/post-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Liyosi Collins</h1>
+                        <h1>Static Sites - What I learned putting together this blog, Part 1</h1>
+                        <span class="meta">Posted by
+                                <a href="http://liyosi.com//pages/about/">Liyosi Collins</a>
+                             on Fri 12 August 2016
+                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -93,26 +120,77 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12  col-md-12 ">
+    <div class="posted-date-wrapper">
+        <i class="fa fa-clock-o"></i><span class="posted-date">  Fri 12 August 2016</span>
+    </div>
+        <div class="tag-labels">
+                <a href="http://liyosi.com/tags/static-sites.html"><small class="tag-label">Static Sites</small></a>
+                <a href="http://liyosi.com/tags/cms.html"><small class="tag-label">CMS</small></a>
+                <a href="http://liyosi.com/tags/blogging-tools.html"><small class="tag-label">Blogging Tools</small></a>
+        </div>
+    <!-- Post Content -->
     <article>
-        <p>Hello, Thanks for stopping by :-)</p>
-<p>Right here is  Liyosi Collins, a techpreneur, a machine learning enthusiast, a writer and a creative.</p>
-<p>This guy Liyosi is intrigued by technology and more so how it can be leveraged by businesses and society
-to surmount challenges that have and continue to bedevil us.</p>
-<p>I:</p>
+        
+
+<p>When it comes to assembling a static site, the technology ecosystem is littered with countless tools,
+each with its own strengths, shortcomings and philosophy. I set out to set my own biased criteria as to what
+a best tool should meet, and here is what I put together...
+</p>
+<blockquote>
+<p>Having options is the Ultimate Freedom</p>
+</blockquote>
+<p>I wanted to put together a simple, static personal blog that met the following three major criteria:</p>
 <ul>
-<li>Write software <Yeah, software is eating the world></li>
-<li>Consult with early-stage technology startups  <strong> <and> </strong></li>
-<li>Revel in helping lower the digital divide to ensure technology is truly democratised and ubiquitous</li>
+<li>Adding posts should be done in plain text in an a text editor that I like : <strong>Sublime Text</strong></li>
+<li>Publishing the added posts online should be done in just <strong>one</strong> command</li>
+<li>My published blog should be served from any CDN - Content Delivery Network , of my choice</li>
 </ul>
-<p>I have keen interests in <strong>Machine Learning</strong> and I envision a future where data will be the gem for computing.
-A future that is data driven, where computing will mimic human's intelligence and totally <strong>augment</strong> our lives.</p>
-<p>In our entangled web, I can be found around the following corners: &lt; You're free to peek at them :-) &gt;</p>
-<p><a href="https://www.linkedin.com/in/collins-liyosi-84903943" target="_blank">Linkedin</a> |
-<a href="https://github.com/liyocee" target="_blank">Github</a> |
-<a href="https://stackoverflow.com/users/1823036/liyosi" target="_blank">Stack Overlow</a> |
-<a href="https://twitter.com/collinsliyosi" target="_blank">Twitter</a> |
-<a href="mailto:info@liyosi.com">info@liyosi.com</a></p>
+<p>So, I started exploring the tools available in my arsenal that could meet the above criteria, and below
+is what I found out:</p>
+<h1>1. Content Management Systems(CMSs):</h1>
+<p>They come in all shapes and sizes, ranging from Wordpress, Drupal, Django CMS , Joomla and many others.</p>
+<p>Of my particular interest was Wordpress because it's widely used and mostly touted to be
+<strong>the tool to be</strong>, when it comes to putting together a personal blog.</p>
+<p>These CMS tools are very good for a different audience and different purposes, but for me, they just couldn't fit my criteria:</p>
+<ul>
+<li>Yes, they give you <em>fancy editors</em> to create your content, without you having to bang your head with
+those html tags</li>
+<li>Yes, they ship with many templates and have large communities around them building very nice templates
+that one can adopt to put up a well designed blog/webiste</li>
+<li>Yes, they have plugins for anything, some free ,some premium and some fremium for an extra functionality
+you may need that doesn't come shipped with the core underlying tool</li>
+<li>Yes, the give one several options for publishing their content online, with the likes of wordpress
+eliminating the whole fuss altogether by allowing you to just do everything on their online tools</li>
+</ul>
+<p>But for me, the above just didn't cut it to make me want to adopt any of them.</p>
+<p>Adopting any one of them would me:</p>
+<ul>
+<li>My content shoud conform to the lingua that each tool has prescribed</li>
+<li>That once I get started using one of them, I would be locked in and even if it reaches a point when I just don't like it; just tossing it away and moving on to the next tool would be quite a hassle, especially porting my content</li>
+<li>That there's no way I could get my content published to any CDN of my choice, <em>I stand corrected</em></li>
+<li>That I would have to put up with a lot of bloated code and nothingness that my published content end up being bundled with, with a lot of functionality that I cannot and will never need</li>
+</ul>
+<p>Hence, I moved on to:</p>
+<h1>2. Static Sites Generators:</h1>
+<p>They too come in all shapes and sizes, ranging from Pelican, Jekyll, Middleman, Brunch, GitBook, MkDocs, Cactus, Nikola ; just to mention a few.</p>
+<p>Each one of them has got its initial learning cover, its own strengths and its own shortcomings.</p>
+<p>I personally tinkered with Pelican(Python Based) and Middleman(Ruby based) and yeah, they just met my needs:</p>
+<ul>
+<li>Each one of them allowed me to write my posts in plain text, ofcourse giving you options to spruce it up using simple, lightweight syntaxes like Markdown and .rst</li>
+<li>They didn't get in my way as to which editor to use for writting the posts</li>
+<li>They allowed me to publish my content with just one command, ofcourse with a few one-off  configurations I had to do</li>
+<li>They allowed me to publish my content to any CDN of my choice, and I ended up publishing the content to Github Pages(gh-pages)</li>
+<li>And Yeah, they didn't just shove anything down my throat - (I like having options and freedom that comes with it)</li>
+</ul>
+<p>I ended up going with Pelican, not for any particular shortcomings that Middleman might have had, but just because I consider myself a Pythonista.</p>
+<p>Apart from this blog, I also put up this <a href="http://zeptohub.com" target="blank">site</a> using the Pelican Generator and hosted by Github Pages CDN, just to push the limits as to what these static sites generators are capable of.</p>
+<p>In the next post, I will delve deeper on how I used Pelican to put up this blog and this <a href="http://zeptohub.com" target="blank">website</a>.</p>
     </article>
+
+<hr>
+<div class="sharing">
+</div>
+
             </div>
         </div>
     </div>
