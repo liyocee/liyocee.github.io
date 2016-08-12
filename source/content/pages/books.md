@@ -11,4 +11,4 @@ my professional and personal life.
 
 Be stopping by from time to time to to checkout by personal thoughts and reviews of several titles that I've read, currently reading or planning to read.
 
-As for now, sorry you din't find anything here.
+As for now, sorry you didn't find anything here.

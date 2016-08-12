@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-
+import os
 AUTHOR = u'Liyosi Collins'
 SITENAME = u'Liyosi'
 SITEURL = ''
@@ -47,7 +47,7 @@ AUTHOR_FEED_RSS = None
 
 MENUITEMS = [
     ('blog', '/'),
-    ('tags', '/tags'),
+    ('tags', '/tags.html'),
     ('archive', '/archives'),
     ('projects', '/pages/projects/'),
     ('books', '/pages/books/'),
@@ -59,8 +59,11 @@ DEFAULT_CATEGORY = 'General'
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 
-SUMMARY_MAX_LENGTH = 100
+SUMMARY_MAX_LENGTH = None
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['summary', ]
 
+FORMATTED_FIELDS = ['summary']
 OUTPUT_RETENTION = ['.git']
 
 IGNORE_FILES = ['.git']
