@@ -1,0 +1,26 @@
+Title: Static Sites - What I learned putting together this blog, Part 2
+Status: draft
+Slug: pelican_101
+Date: 2016-08-115 9:00
+Tags: Static Sites, Pelican, Tech, Github Pages, SEO, Disqus
+
+<!-- PELICAN_BEGIN_SUMMARY -->
+
+<!-- PELICAN_END_SUMMARY -->
+
+Pelican is python based static site generator [link to github and its docs]
+- Structure
+- Github pages
+- Custom domain with github pages
+- Pages/Navigation
+- Themes
+- Plugins
+- Content
+- Disqus Comments
+- Sharing on social media
+- SEO
+- PDF generation of articles/pages
+- Google Analytics
+- create and open source my theme
+- Reference : include search etc : http://oncrashreboot.com/elegant-best-pelican-theme-features
+- Add mailchimp
