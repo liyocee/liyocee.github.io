@@ -1,7 +1,7 @@
 Title: Static Sites - What I learned putting together this blog, Part 2
 Status: draft
 Slug: pelican_101
-Date: 2016-08-115 9:00
+Date: 2016-08-15 9:00
 Tags: Static Sites, Pelican, Tech, Github Pages, SEO, Disqus
 
 <!-- PELICAN_BEGIN_SUMMARY -->
