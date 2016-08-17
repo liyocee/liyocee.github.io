@@ -59,7 +59,8 @@ DEFAULT_CATEGORY = 'General'
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 
-SUMMARY_MAX_LENGTH = None
+SUMMARY_MAX_LENGTH = 45
+LOAD_CONTENT_CACHE = False
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['summary', ]
 
@@ -83,8 +84,8 @@ THEME = 'themes/ckl'
 
 # Theme settings
 # HEADER_COLOR = 'black'
-# HEADER_COVER = 'static/images/blog/ckl/banner.jpg'
-COLOR_SCHEME_CSS = 'darkly.css'  # can be github.css; tomorrow.css; tomorrow_night.csc; darkly.css; monokai
+# HEADER_COVER = 'static/images/header_cover.jpg'
+COLOR_SCHEME_CSS = 'monokai.css'  # can be github.css; tomorrow.css; tomorrow_night.csc; darkly.css; monokai
 # overriding section of the theme styling
 CSS_OVERRIDE = 'static/css/ckl.css'
 CUSTOM_JS = 'static/js/ckl.js'

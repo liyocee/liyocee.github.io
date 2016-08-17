@@ -58,11 +58,11 @@
         {% if SHOW_FULL_ARTICLE %}
             <p>{{ article.content }} </p>
         {% elif article.summary  %}
-            <p>{{ article.summary|striptags|truncate(0, SUMMARY_MAX_LENGTH)  }} </p>
+            <p>{{ article.summary}} </p>
             <div class="read-more"><a href="{{ SITEURL }}/{{ article.url }}">Read More<i class="fa fa-angle-double-right"></i></a>
             </div>
         {% else %}
-            <p>{{ article.content|striptags|truncate(0, SUMMARY_MAX_LENGTH) }} </p>
+            <p>{{ article.content }} </p>
             <div class="read-more"><a href="{{ SITEURL }}/{{ article.url }}">Read More <i class="fa fa-angle-double-right"></i></a>
             </div>
         {% endif %}

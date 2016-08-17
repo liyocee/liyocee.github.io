@@ -2,6 +2,7 @@ Title: What I've been reading
 Status: published
 Date: 2016-08-07 19:00
 Slug: books
+HEADER_COVER: /static/images/blog/ckl/books.jpg
 
 > A great book should leave you with many experiences, and slightly exhausted. You should leave
 several lives while reading it.
