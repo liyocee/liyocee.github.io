@@ -74,4 +74,4 @@ I ended up going with Pelican, not for any particular shortcomings that Middlema
 Apart from this blog, I also put up this [site](http://zeptohub.com){:target='blank'} using the Pelican Generator and hosted by Github Pages CDN, just to push the limits as to what these static sites generators are capable of.
 
 
-In the next post, I will delve deeper on how I used Pelican to put up this blog and this [website](http://zeptohub.com){:target='blank'}.
+In the [next post]({filename}/blog/tech/pelican_101_basics.md), I will delve deeper on how I used Pelican to put up this blog and this [website](http://zeptohub.com){:target='blank'}.

@@ -1,4 +1,3 @@
-
 Title: Static Sites - What I learned putting together this blog, Part 4
 Status: draft
 Slug: pelican_101_comments_sharing_navigation
