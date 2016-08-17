@@ -74,7 +74,7 @@ ghp-import==0.4.1
 &lt;p&gt;Running &lt;code&gt;pelican-quickstart&lt;/code&gt; on your terminal will ask you a bunch of questions as it generates the static site.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note,&lt;/strong&gt; On the:  &lt;code&gt;&amp;gt; Where do you want to create your new web site? [.]&lt;/code&gt; question, provide &lt;code&gt;source&lt;/code&gt; so
 that the generated files are put in the source folder.&lt;/p&gt;
-&lt;h1&gt;Creating your first article and quick previewing the generated site&lt;/h1&gt;
+&lt;h1&gt;Creating your first article and Previewing the generated site&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;h4&gt;1. Create your first article&lt;/h4&gt;
 &lt;p&gt;Use your preferred text editor and create your first article with the following content:&lt;/p&gt;
