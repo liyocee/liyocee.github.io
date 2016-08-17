@@ -170,7 +170,7 @@ Update your ```publishconf.py``` file in the ```source``` folder so as it looks 
 
 To publish your site, run:
 
-    pelican publish
+    fab publish
 
 
 Congrats, your have just created and published your blog using pelican. Preview your blog by navigating to ```http://your_github_username.github.io```
