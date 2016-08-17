@@ -1,5 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Liyosi</title><link href="http://liyosi.com/" rel="alternate"></link><link href="http://liyosi.com/feeds/tech.atom.xml" rel="self"></link><id>http://liyosi.com/</id><updated>2016-08-12T09:00:00+03:00</updated><entry><title>Static Sites - What I learned putting together this blog, Part 1</title><link href="http://liyosi.com/blog/2016/Aug/12/static_sites/" rel="alternate"></link><published>2016-08-12T09:00:00+03:00</published><author><name>Liyosi Collins</name></author><id>tag:liyosi.com,2016-08-12:blog/2016/Aug/12/static_sites/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Liyosi</title><link href="http://liyosi.com/" rel="alternate"></link><link href="http://liyosi.com/feeds/tech.atom.xml" rel="self"></link><id>http://liyosi.com/</id><updated>2016-08-15T09:00:00+03:00</updated><entry><title>Static Sites - What I learned putting together this blog, Part 2</title><link href="http://liyosi.com/blog/2016/Aug/15/pelican_101_basics/" rel="alternate"></link><published>2016-08-15T09:00:00+03:00</published><author><name>Liyosi Collins</name></author><id>tag:liyosi.com,2016-08-15:blog/2016/Aug/15/pelican_101_basics/</id><summary type="html">
+
+&lt;p&gt;This is a step by step guide on how to get your hands dirty with  pelican, &lt;strong&gt;a python based static site generator&lt;/strong&gt;, to put together a personal blog and have it published online without spending a dime.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a __blank_="'_blank'" href="http://docs.getpelican.com/en/3.6.3/index.html" target:="target:"&gt;Pelican&lt;/a&gt; is a very nice to have tool in your  arsenal,  for any creative. As I tinkered with it when assembling this blog, I have some gotchas for you to get you started on it.&lt;/p&gt;
+&lt;h1&gt;Setting up the project&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h4&gt;1.  Creating Project Repository&lt;/h4&gt;
+&lt;p&gt;Head to &lt;a href="http://github.com" targe="_blank"&gt;Github&lt;/a&gt; and create a github repository for the project source's code. Inorder for you to be able to use github as your CDN(Content Delivery Network) to serve your blog when published, the repository has to be named as: &lt;code&gt;your_github_username.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Creating Github Pages Reposiotry" src="http://liyosi.com/blog/tech/gh_pages.png" /&gt;&lt;/p&gt;
+&lt;p&gt;This way, github will recognise the project as Github Pages and be able to serve it as a static site when you visit:
+&lt;code&gt;http://your_github_username.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You see, no need to spend a dime to buy some domain and hosting space somewhere so as to be able to create you digital presence. Times have never been so exciting !&lt;/p&gt;
+&lt;h4&gt;2. Cloning the project and setting up relevant git branches&lt;/h4&gt;
+&lt;p&gt;Clone the project repository:
+    &lt;code&gt;git clone https://github.com/your_githib_username/your_github_username.github.io&lt;/code&gt; .
+Then create a local &lt;strong&gt;dev&lt;/strong&gt; branch, switching to it at the same time:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd your_github_username.github.io
+git checkout -b dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;3. Installing project dependencies&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a &lt;strong&gt;requirements.txt&lt;/strong&gt; file in the project root folder and put a bunch of project dependencies:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;requirements.txt&lt;/em&gt; file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;beautifulsoup4==4.5.1
+blinker==1.4
+docutils==0.12
+feedgenerator==1.8
+Jinja2==2.8
+Markdown==2.6.6
+MarkupSafe==0.23
+pelican==3.6.3
+Pillow==3.3.0
+Pygments==2.1.3
+python-dateutil==2.5.3
+pytz==2016.6.1
+six==1.10.0
+smartypants==1.8.6
+typogrify==2.0.7
+Unidecode==0.4.19
+webassets==0.11.1
+Fabric==1.12.0
+ghp-import==0.4.1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Create  a python virtual enviroment for the project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install virtualenv via pip if you don't have it installed already:
+    &lt;code&gt;pip install virtualenv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create virtual environment for the project:
+    &lt;code&gt;virtualenv venv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Git Ignore the created virtual environmennt folder:
+    &lt;code&gt;echo '/venv' &amp;gt;&amp;gt; .gitignore&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Activate the python virtual enviroment:
+    &lt;code&gt;source venv/bin/activate&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then install project dependencies from the requirements file:
+   &lt;code&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Generating Pelican's Initial files&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;Running &lt;code&gt;pelican-quickstart&lt;/code&gt; on your terminal will ask you a bunch of questions as it generates the static site.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note,&lt;/strong&gt; On the:  &lt;code&gt;&amp;gt; Where do you want to create your new web site? [.]&lt;/code&gt; question, provide &lt;code&gt;source&lt;/code&gt; so
+that the generated files are put in the source folder.&lt;/p&gt;
+&lt;h1&gt;Creating your first article and quick previewing the generated site&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h4&gt;1. Create your first article&lt;/h4&gt;
+&lt;p&gt;Use your preferred text editor and create your first article with the following content:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;First&lt;/span&gt; &lt;span class="n"&gt;Article&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2016&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;blogging_101&lt;/span&gt;
+
+&lt;span class="n"&gt;Yeay&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;shot&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;blogging&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Given that this example article is in &lt;strong&gt;Markdown&lt;/strong&gt; format(you can use any format you like .rst), save it
+in the &lt;code&gt;content&lt;/code&gt; folder of the sorce directory with a &lt;em&gt;.md&lt;/em&gt; file extension.&lt;/p&gt;
+&lt;h4&gt;2. Generate your site&lt;/h4&gt;
+&lt;p&gt;From your site directory, in the source folder, run the &lt;code&gt;pelican&lt;/code&gt; command to generate your site:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pelican content
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;3. Preview your site&lt;/h4&gt;
+&lt;p&gt;Open a new terminal session and run the following commands to switch to your
+&lt;code&gt;output&lt;/code&gt; directory and launch Pelican's web server:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd ~/your_project_directory/source/output
+python -m pelican.server
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Preview your site by navigating to http://localhost:8000/ in your browser.&lt;/p&gt;
+&lt;h1&gt;Publishing your site&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;To publish your site, we will use python's fabric automation tool.&lt;/p&gt;
+&lt;p&gt;Replace the contents of the &lt;code&gt;fabfile.py&lt;/code&gt; file in the &lt;code&gt;source folder&lt;/code&gt; with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fabric.api&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;env&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;shutil&lt;/span&gt;
+&lt;span class="c1"&gt;# Local path configuration (can be absolute or relative to fabfile)&lt;/span&gt;
+&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deploy_path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;output&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;DEPLOY_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deploy_path&lt;/span&gt;
+&lt;span class="c1"&gt;# Github Pages configuration&lt;/span&gt;
+&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github_pages_branch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;master&amp;quot;&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Remove generated files&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DEPLOY_PATH&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;shutil&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rmtree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DEPLOY_PATH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;makedirs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DEPLOY_PATH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;gh_pages&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Publish to GitHub Pages&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;clean&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican -s publishconf.py&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ghp-import -b {github_pages_branch} {deploy_path}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git push origin {github_pages_branch}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;publish&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;gh_pages&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Update your &lt;code&gt;publishconf.py&lt;/code&gt; file in the &lt;code&gt;source&lt;/code&gt; folder so as it looks like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;unicode_literals&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;curdir&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pelicanconf&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+
+&lt;span class="n"&gt;SITEURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://your_github_username.github.io&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;RELATIVE_URLS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="n"&gt;DELETE_OUTPUT_DIRECTORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+
+
+&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;feeds/all.atom.xml&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;feeds/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;.atom.xml&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To publish your site, in your source folder of your site directory, run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pelican publish
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Congrats, your have just created and published your blog using pelican. Preview your blog by navigating to &lt;code&gt;http://your_github_username.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Remember to commit and push your changes upstream, on your github repository:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd &amp;lt;your_project_folder&amp;gt;
+git add .
+git commit -m &amp;#39;Generated my blog using pelican&amp;#39;
+git push origin dev   # push to the dev branch upstream
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In the next post, I will be delving deeper into:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understanding the folders and files that were generated by pelican&lt;/li&gt;
+&lt;li&gt;How to spruce up the generated site to your taste by using custom themes&lt;/li&gt;
+&lt;li&gt;How to organize and structure your blog files , in my opionated structure&lt;/li&gt;
+&lt;li&gt;How to publish your blog on your custom domain&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Static Sites"></category><category term="Pelican 101"></category><category term="Tech"></category><category term="Github Pages"></category></entry><entry><title>Static Sites - What I learned putting together this blog, Part 1</title><link href="http://liyosi.com/blog/2016/Aug/12/static_sites/" rel="alternate"></link><published>2016-08-12T09:00:00+03:00</published><author><name>Liyosi Collins</name></author><id>tag:liyosi.com,2016-08-12:blog/2016/Aug/12/static_sites/</id><summary type="html">
 
 &lt;p&gt;When it comes to assembling a static site, the technology ecosystem is littered with countless tools,
 each with its own strengths, shortcomings and philosophy. I set out to set my own biased criteria as to what

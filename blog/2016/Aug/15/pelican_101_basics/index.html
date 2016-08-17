@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <meta name="author" content="Liyosi Collins" />
+        <meta name="copyright" content="Liyosi Collins" />
+        <title>Static Sites - What I learned putting together this blog, Part 2</title>
+
+            <link href="http://liyosi.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Liyosi Full Atom Feed" />
+            <link href="http://liyosi.com/feeds/tech.atom.xml" type="application/atom+xml" rel="alternate" title="Liyosi Categories Atom Feed" />
+        <!-- Bootstrap Core CSS -->
+        <link href="http://liyosi.com/theme/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="http://liyosi.com/theme/css/clean-blog.min.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="http://liyosi.com/theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+            <!-- CSS specified by the user -->
+            <link href="http://liyosi.com/static/css/ckl.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+
+        <meta name="description" content="This is a step by step guide on how to get your hands dirty with pelican, a python based static site generator, to put together a ...">
+
+        <meta name="author" content="Liyosi Collins">
+
+        <meta name="tags" content="Static Sites">
+        <meta name="tags" content="Pelican 101">
+        <meta name="tags" content="Tech">
+        <meta name="tags" content="Github Pages">
+
+	                <meta property="og:locale" content="">
+		<meta property="og:site_name" content="Liyosi">
+
+	<meta property="og:type" content="article">
+            <meta property="article:author" content="http://liyosi.com//pages/about/">
+	<meta property="og:url" content="http://liyosi.com/blog/2016/Aug/15/pelican_101_basics/">
+	<meta property="og:title" content="Static Sites - What I learned putting together this blog, Part 2">
+	<meta property="article:published_time" content="2016-08-15 09:00:00+03:00">
+            <meta property="og:description" content="This is a step by step guide on how to get your hands dirty with pelican, a python based static site generator, to put together a ...">
+
+            <meta property="og:image" content="http://liyosi.com/theme/images/post-bg.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@collinsliyosi">
+        <meta name="twitter:title" content="Static Sites - What I learned putting together this blog, Part 2">
+
+            <meta name="twitter:image" content="http://liyosi.com/theme/images/post-bg.jpg">
+
+            <meta name="twitter:description" content="This is a step by step guide on how to get your hands dirty with pelican, a python based static site generator, to put together a ...">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://liyosi.com/">Liyosi</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">blog </a></li>
+                        <li><a href="/tags.html">tags </a></li>
+                        <li><a href="/archives">archive </a></li>
+                        <li><a href="/pages/projects/">projects </a></li>
+                        <li><a href="/pages/books/">books </a></li>
+                        <li><a href="/pages/liyosi/">about </a></li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('http://liyosi.com/theme/images/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Static Sites - What I learned putting together this blog, Part 2</h1>
+                        <span class="meta">Posted by
+                                <a href="http://liyosi.com//pages/about/">Liyosi Collins</a>
+                             on Mon 15 August 2016
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12  col-md-12 ">
+    <div class="posted-date-wrapper">
+        <i class="fa fa-clock-o"></i><span class="posted-date">  Mon 15 August 2016</span>
+    </div>
+        <div class="tag-labels">
+                <a href="http://liyosi.com/tags/static-sites.html"><small class="tag-label">Static Sites</small></a>
+                <a href="http://liyosi.com/tags/pelican-101.html"><small class="tag-label">Pelican 101</small></a>
+                <a href="http://liyosi.com/tags/tech.html"><small class="tag-label">Tech</small></a>
+                <a href="http://liyosi.com/tags/github-pages.html"><small class="tag-label">Github Pages</small></a>
+        </div>
+    <!-- Post Content -->
+    <article>
+        
+
+<p>This is a step by step guide on how to get your hands dirty with  pelican, <strong>a python based static site generator</strong>, to put together a personal blog and have it published online without spending a dime.</p>
+
+
+<p><a __blank_="'_blank'" href="http://docs.getpelican.com/en/3.6.3/index.html" target:="target:">Pelican</a> is a very nice to have tool in your  arsenal,  for any creative. As I tinkered with it when assembling this blog, I have some gotchas for you to get you started on it.</p>
+<h1>Setting up the project</h1>
+<hr />
+<h4>1.  Creating Project Repository</h4>
+<p>Head to <a href="http://github.com" targe="_blank">Github</a> and create a github repository for the project source's code. Inorder for you to be able to use github as your CDN(Content Delivery Network) to serve your blog when published, the repository has to be named as: <code>your_github_username.github.io</code></p>
+<p><img alt="Creating Github Pages Reposiotry" src="http://liyosi.com/blog/tech/gh_pages.png" /></p>
+<p>This way, github will recognise the project as Github Pages and be able to serve it as a static site when you visit:
+<code>http://your_github_username.github.io</code></p>
+<p>You see, no need to spend a dime to buy some domain and hosting space somewhere so as to be able to create you digital presence. Times have never been so exciting !</p>
+<h4>2. Cloning the project and setting up relevant git branches</h4>
+<p>Clone the project repository:
+    <code>git clone https://github.com/your_githib_username/your_github_username.github.io</code> .
+Then create a local <strong>dev</strong> branch, switching to it at the same time:</p>
+<div class="highlight"><pre><span></span>cd your_github_username.github.io
+git checkout -b dev
+</pre></div>
+
+
+<h4>3. Installing project dependencies</h4>
+<ul>
+<li>Create a <strong>requirements.txt</strong> file in the project root folder and put a bunch of project dependencies:</li>
+</ul>
+<p><em>requirements.txt</em> file:</p>
+<div class="highlight"><pre><span></span>beautifulsoup4==4.5.1
+blinker==1.4
+docutils==0.12
+feedgenerator==1.8
+Jinja2==2.8
+Markdown==2.6.6
+MarkupSafe==0.23
+pelican==3.6.3
+Pillow==3.3.0
+Pygments==2.1.3
+python-dateutil==2.5.3
+pytz==2016.6.1
+six==1.10.0
+smartypants==1.8.6
+typogrify==2.0.7
+Unidecode==0.4.19
+webassets==0.11.1
+Fabric==1.12.0
+ghp-import==0.4.1
+</pre></div>
+
+
+<ul>
+<li>
+<p>Create  a python virtual enviroment for the project:</p>
+<ul>
+<li>Install virtualenv via pip if you don't have it installed already:
+    <code>pip install virtualenv</code></li>
+<li>Create virtual environment for the project:
+    <code>virtualenv venv</code></li>
+<li>Git Ignore the created virtual environmennt folder:
+    <code>echo '/venv' &gt;&gt; .gitignore</code></li>
+<li>Activate the python virtual enviroment:
+    <code>source venv/bin/activate</code></li>
+</ul>
+</li>
+<li>
+<p>Then install project dependencies from the requirements file:
+   <code>pip install -r requirements.txt</code></p>
+</li>
+</ul>
+<h1>Generating Pelican's Initial files</h1>
+<hr />
+<p>Running <code>pelican-quickstart</code> on your terminal will ask you a bunch of questions as it generates the static site.</p>
+<p><strong>Note,</strong> On the:  <code>&gt; Where do you want to create your new web site? [.]</code> question, provide <code>source</code> so
+that the generated files are put in the source folder.</p>
+<h1>Creating your first article and quick previewing the generated site</h1>
+<hr />
+<h4>1. Create your first article</h4>
+<p>Use your preferred text editor and create your first article with the following content:</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">First</span> <span class="n">Article</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">15</span> <span class="mi">9</span><span class="o">:</span><span class="mi">00</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">blogging_101</span>
+
+<span class="n">Yeay</span><span class="o">,</span> <span class="k">this</span> <span class="k">is</span> <span class="n">my</span> <span class="n">shot</span> <span class="n">at</span> <span class="n">blogging</span>
+</pre></div>
+
+
+<p>Given that this example article is in <strong>Markdown</strong> format(you can use any format you like .rst), save it
+in the <code>content</code> folder of the sorce directory with a <em>.md</em> file extension.</p>
+<h4>2. Generate your site</h4>
+<p>From your site directory, in the source folder, run the <code>pelican</code> command to generate your site:</p>
+<div class="highlight"><pre><span></span>pelican content
+</pre></div>
+
+
+<h4>3. Preview your site</h4>
+<p>Open a new terminal session and run the following commands to switch to your
+<code>output</code> directory and launch Pelican's web server:</p>
+<div class="highlight"><pre><span></span>cd ~/your_project_directory/source/output
+python -m pelican.server
+</pre></div>
+
+
+<p>Preview your site by navigating to http://localhost:8000/ in your browser.</p>
+<h1>Publishing your site</h1>
+<hr />
+<p>To publish your site, we will use python's fabric automation tool.</p>
+<p>Replace the contents of the <code>fabfile.py</code> file in the <code>source folder</code> with:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="n">local</span><span class="p">,</span> <span class="n">env</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="c1"># Local path configuration (can be absolute or relative to fabfile)</span>
+<span class="n">env</span><span class="o">.</span><span class="n">deploy_path</span> <span class="o">=</span> <span class="s1">&#39;output&#39;</span>
+<span class="n">DEPLOY_PATH</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">deploy_path</span>
+<span class="c1"># Github Pages configuration</span>
+<span class="n">env</span><span class="o">.</span><span class="n">github_pages_branch</span> <span class="o">=</span> <span class="s2">&quot;master&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">clean</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Remove generated files&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">DEPLOY_PATH</span><span class="p">):</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">DEPLOY_PATH</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">DEPLOY_PATH</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">gh_pages</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Publish to GitHub Pages&quot;&quot;&quot;</span>
+    <span class="n">clean</span><span class="p">()</span>
+    <span class="n">local</span><span class="p">(</span><span class="s1">&#39;pelican -s publishconf.py&#39;</span><span class="p">)</span>
+    <span class="n">local</span><span class="p">(</span><span class="s2">&quot;ghp-import -b {github_pages_branch} {deploy_path}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">env</span><span class="p">))</span>
+    <span class="n">local</span><span class="p">(</span><span class="s2">&quot;git push origin {github_pages_branch}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">env</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">publish</span><span class="p">():</span>
+    <span class="n">gh_pages</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Update your <code>publishconf.py</code> file in the <code>source</code> folder so as it looks like:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">pelicanconf</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;http://your_github_username.github.io&#39;</span>
+<span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">DELETE_OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="bp">True</span>
+
+
+<span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="s1">&#39;feeds/all.atom.xml&#39;</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="s1">&#39;feeds/</span><span class="si">%s</span><span class="s1">.atom.xml&#39;</span>
+</pre></div>
+
+
+<p>To publish your site, in your source folder of your site directory, run:</p>
+<div class="highlight"><pre><span></span>pelican publish
+</pre></div>
+
+
+<p>Congrats, your have just created and published your blog using pelican. Preview your blog by navigating to <code>http://your_github_username.github.io</code></p>
+<p>Remember to commit and push your changes upstream, on your github repository:</p>
+<div class="highlight"><pre><span></span>cd &lt;your_project_folder&gt;
+git add .
+git commit -m &#39;Generated my blog using pelican&#39;
+git push origin dev   # push to the dev branch upstream
+</pre></div>
+
+
+<p>In the next post, I will be delving deeper into:</p>
+<ul>
+<li>Understanding the folders and files that were generated by pelican</li>
+<li>How to spruce up the generated site to your taste by using custom themes</li>
+<li>How to organize and structure your blog files , in my opionated structure</li>
+<li>How to publish your blog on your custom domain</li>
+</ul>
+    </article>
+
+<hr>
+<div class="sharing">
+        <h4>Share on:</h4>
+        <!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+            <a class="addthis_button_preferred_1"></a>
+            <a class="addthis_button_preferred_2"></a>
+            <!-- <a class="addthis_button_preferred_3"></a> -->
+            <!-- <a class="addthis_button_preferred_4"></a> -->
+            <a class="addthis_button_preferred_5"></a>
+            <a class="addthis_button_preferred_6"></a>
+            <a class="addthis_button_preferred_7"></a>
+            <a class="addthis_button_preferred_8"></a>
+            <!-- <a class="addthis_button_preferred_9"></a> -->
+            <!-- <a class="addthis_button_compact"></a> -->
+            <a class="addthis_counter addthis_bubble_style"></a>
+        </div>
+        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57adf2ff04087e24"></script>
+        <!-- AddThis Button END -->
+        <hr>
+</div>
+
+        <div class="comments">
+            <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'liyosi';
+                var disqus_identifier = 'blog/2016/Aug/15/pelican_101_basics/';
+                var disqus_url = 'http://liyosi.com/blog/2016/Aug/15/pelican_101_basics/';
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//liyosi.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                    <ul class="list-inline text-center">
+                            <li>
+                                <a href="https://www.linkedin.com/in/collins-liyosi-84903943" target='_blank' class="link"
+                                 data-original-title="
+Checkout <MY> linkedin  :-)">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                </li>
+                            <li>
+                                <a href="https://github.com/liyocee" target='_blank' class="link"
+                                 data-original-title="
+Checkout <MY> github  :-)">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                </li>
+                            <li>
+                                <a href="https://stackoverflow.com/users/1823036/liyosi" target='_blank' class="link"
+                                 data-original-title="
+Checkout <MY> stack-overflow  :-)">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                </li>
+                            <li>
+                                <a href="https://twitter.com/collinsliyosi" target='_blank' class="link"
+                                 data-original-title="
+Checkout <MY> twitter  :-)">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                </li>
+                            <li>
+                                <a href="mailto:info@liyosi.com" target='_blank' class="link"
+                                 data-original-title="
+ Drop <ME> a mail  :-)">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                </li>
+                    </ul>
+            </div>
+        </div>
+<div class="footer-wrapper">
+<div class="author">
+    <div class="image-wrapper">
+        <a href="/pages/about/"><img alt="author" src="http://liyosi.com/static/images/profile_pic.png" />
+        </a>
+    </div>
+</div>
+<div class="copyright text-center"><i class="fa fa-copyright"></i> 2016 <a href="/"> - Liyosi Collins
+</a> </div>
+</div>    </footer>
+
+    <!-- jQuery -->
+    <script src="http://liyosi.com/theme/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="http://liyosi.com/theme/js/bootstrap.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="http://liyosi.com/theme/js/clean-blog.min.js"></script>
+
+        <!-- custom js specified by the user -->
+        <script src="http://liyosi.com/static/js/ckl.js"> </script>
+
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-67190565-3', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    var disqus_shortname = 'liyosi';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+
+</html>
