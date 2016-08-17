@@ -155,7 +155,7 @@ python -m pelican.server
 
 
 &lt;p&gt;To publish your site, run:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pelican publish
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fab publish
 &lt;/pre&gt;&lt;/div&gt;
 
 
