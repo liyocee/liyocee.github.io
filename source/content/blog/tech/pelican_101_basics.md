@@ -84,7 +84,7 @@ Running ```pelican-quickstart ``` on your terminal will ask you a bunch of quest
 **Note,** On the:  ```> Where do you want to create your new web site? [.]``` question, provide ```source``` so
 that the generated files are put in the source folder.
 
-#  Creating your first article and quick previewing the generated site
+#  Creating your first article and Previewing the generated site
 -----------------------------------------------------------------------
 
 ####1. Create your first article
