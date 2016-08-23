@@ -86,11 +86,9 @@ that sweat trickling down. So don't judge others, you never know what they been 
 &lt;li&gt;
 &lt;p&gt;Sleep, sleep and sleep. Burn out is no fun and those poly-phasic sleep hacks are a hoax. Do atleast 8hrs a night. Our bodies need to re-create themselves.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;...and most importantly, believe in something bigger, bigger than yourself. A power that be, that guides you around
-amidst all the craze in the world, that makes you remain focused on your true north.&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;....and most importantly, believe in something bigger, bigger than yourself. A power that be, that guides you around
+amidst all the craze in the world, that makes you remain focused on your true north.&lt;/p&gt;
 &lt;p&gt;Please add to the list, the ones you may have learned ...so that I don't re-learn them the hard way.&lt;/p&gt;</summary><category term="Motivation"></category><category term="Birthday"></category><category term="Life Lessons"></category></entry><entry><title>Static Sites - What I learned putting together this blog, Part 2</title><link href="http://liyosi.com/blog/2016/Aug/17/pelican_101_basics/" rel="alternate"></link><published>2016-08-17T09:00:00+03:00</published><author><name>Liyosi Collins</name></author><id>tag:liyosi.com,2016-08-17:blog/2016/Aug/17/pelican_101_basics/</id><summary type="html">
 
 &lt;p&gt;This is Part 2 on a step by step guide on how to get your hands dirty with  pelican, &lt;strong&gt;a python based static site generator&lt;/strong&gt;, to put together a personal blog and have it published online without spending a dime. Part 1 of this post can be found &lt;a href="http://liyosi.com/blog/2016/Aug/12/static_sites/"&gt;here&lt;/a&gt; .&lt;/p&gt;
