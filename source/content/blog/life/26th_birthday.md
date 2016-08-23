@@ -30,44 +30,48 @@ Here we go:
 
 8. The grind, the process of doing/building something should be as fascinating as the end result. Don't be fixated so much on the end that you miss to celebrate the small scores that you hit along the way.
 
-10. Embrace the power of compounding, in everything. 1% compounded everyday is 36500% in a year.Figure out how to improve 1% everyday on things
+8. Embrace the power of compounding, in everything. 1% compounded everyday is 36500% in a year.Figure out how to improve 1% everyday on things
 you deeply care about
 
-11. Dont burn bridges, you only connect the dots looking backwards.
+9. Dont burn bridges, you only connect the dots looking backwards.
 
 
-12. You are damned if you do and damned if you don't , so you better do you and ignore the critics.
+10. You are damned if you do and damned if you don't , so you better do you and ignore the critics.
 
 
-13. The fewer things you own, the fewer things own you. Throw out the chaff and endevor to be a minimalist.
+11. The fewer things you own, the fewer things own you. Throw out the chaff and endevor to be a minimalist.
 
-15. Kaizen - keep on getting better. Never aspire for drastic big shot changes in your life, endevor for small, incremental and progressive changes.
+12. Kaizen - keep on getting better. Never aspire for drastic big shot changes in your life, endevor for small, incremental and progressive changes.
 
-16. You can never know how it feels like unless you are in the arena, with your sleeves rolled up and
+13. You can never know how it feels like unless you are in the arena, with your sleeves rolled up and
 that sweat trickling down. So don't judge others, you never know what they been through or currently undergoing.
 
 
-17. Job security is a myth in this knowledge economy. Your dispensable, everyone is. The only security there's is you, your brand, your skillset, your portfolio and your network. Put in some effort in building those.
+14. Job security is a myth in this knowledge economy. Your dispensable, everyone is. The only security there's is you, your brand, your skillset, your portfolio and your network. Put in some effort in building those.
 
-18. Every one is an entrepneur. Everyone, whether employed or not, usually has got something on the side he/she does to make those extra bucks. The only difference is at what scale and with how much dedication they do it.
+15. Every one is an entrepneur. Everyone, whether employed or not, usually has got something on the side he/she does to make those extra bucks. The only difference is at what scale and with how much dedication they do it.
 
-19. It's better to ask for forgiveness than permission.Just go straight a head and do whatever you want to do.
+16. It's better to ask for forgiveness than permission.Just go straight a head and do whatever you want to do.
 
-20. To get what you have never had,you must do wht you have never done.
+17. To get what you have never had,you must do wht you have never done.
 
-21. Consistence and skill beats talent; everytime, every minute. Show up everyday.
+18. Consistence and skill beats talent; everytime, every minute. Show up everyday.
 
-22. Be grateful for everything you have.  For your current reality is someone's else dream. But gratidue doesn't mean comfort, don't get comfortable.
+19. Be grateful for everything you have.  For your current reality is someone's else dream. But gratitude doesn't mean comfort, don't get comfortable.
 
-23. Who your spouse will be is the most important career decision you will ever make. I don't have a spouse yet but I just know this.
+20. Who your spouse will be is the most important career decision you will ever make. I don't have a spouse yet but I just know this.
 
-24. Business is about creating value to your customers. No value = No Customers = No profits = No business. Don’t believe your own hype or ride on startups craze wave.
+21. Business is about creating value to your customers. No value = No Customers = No profits = No business. Don’t believe your own hype or ride on startups craze wave.
 
-25. Surround yourself with the right people; just a few; who cheers you on and gives it to you straight, without sugar coating anything. We are social beings after all.
+22. Surround yourself with the right people; just a few; who cheers you on and gives it to you straight, without sugar coating anything. We are social beings after all.
 
-26. Sleep, sleep and sleep. Burn out is no fun and those poly-phasic sleep hacks are a hoax. Do atleast 8hrs a night. Our bodies need to re-create themselves.
+23. The choices you make will be your biography tomorrow.
 
-...and most importantly, believe in something bigger, bigger than yourself. A power that be, that guides you around
+24. The last safe investment that can never go wrong,  is investiment in yourself. Investment in your relantionships, health, creativity, personal growth...
+
+25. Sleep, sleep and sleep. Burn out is no fun and those poly-phasic sleep hacks are a hoax. Do atleast 8hrs a night. Our bodies need to re-create themselves.
+
+....and most importantly, believe in something bigger, bigger than yourself. A power that be, that guides you around
 amidst all the craze in the world, that makes you remain focused on your true north.
 
 
